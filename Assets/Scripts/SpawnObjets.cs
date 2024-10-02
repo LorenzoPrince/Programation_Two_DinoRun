@@ -11,11 +11,11 @@ public class SpawnObjets : MonoBehaviour
     public float repeticion;
     void Start()
     {  
-       InvokeRepeating("SpawnObstaculos", tiempoDearranque, repeticion); 
+       InvokeRepeating("SpawnObstaculos", tiempoDearranque, repeticion); //llamar funcion doble comilla en este caso ya que pide pasarla como cadena de texto el invoke
     }
 
     // Update is called once per frame
-    void Update()
+    void SpawnObstaculos() 
     {
         int indiceAleatorio = Random.Range(0, arregleDeObstaculos.Length);
         GameObject obstaculoAleatorio = arregleDeObstaculos[indiceAleatorio];

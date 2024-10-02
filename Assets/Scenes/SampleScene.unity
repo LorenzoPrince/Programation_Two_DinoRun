@@ -593,10 +593,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arregleDeObstaculos:
-  - {fileID: 0}
-  posicionSpawn: {x: 0, y: 0}
+  - {fileID: 7519727101789801949, guid: c5f403adba764b34badf29f2dda88e9b, type: 3}
+  - {fileID: 669150249209634822, guid: 8f456a7f5abc4124e8b429000fad973f, type: 3}
+  posicionSpawn: {x: 10, y: -4.01}
   tiempoDearranque: 1
-  repeticion: 1
+  repeticion: 2
 --- !u!4 &2096291736
 Transform:
   m_ObjectHideFlags: 0

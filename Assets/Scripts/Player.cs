@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     public float Jumpforce;
     private bool touchfloor = true;
 
+    [SerializeField] GameOver Menu; //hago referencia al anterior script
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +30,15 @@ public class Player : MonoBehaviour
             touchfloor = false;                                                              // forcemode2d dice como aplica la fuerza el impulse hace que se aplique la fuerza instantaneamente buena para saltos
             Debug.Log("anda");
         }
+ 
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         touchfloor = true;
+        if (collision.gameObject.CompareTag("Dead"))
+        {
+            Debug.Log("kill you");
+            Menu.ActiveScreenLose(); //activa del otro script la funcion 
+        }
     }
 }
