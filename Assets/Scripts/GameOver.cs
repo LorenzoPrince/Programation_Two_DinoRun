@@ -16,6 +16,7 @@ public class GameOver : MonoBehaviour
     {
         Lose.SetActive(true);
         Time.timeScale = 0f;
+
     }
 
     public void Restart()
